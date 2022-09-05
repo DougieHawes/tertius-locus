@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Montserrat&display=swap");
+
+$colour1: #3a2d32;
+$colour2: #edead0;
+$colour3: #ffc4eb;
+$colour4: #759aab;
+$colour5: #355834;
+
+$header-height: 90px;
+
+* {
+  box-sizing: border-box;
+  color: $colour1;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Henny Penny", cursive;
+}
+
+.header {
+  background-color: rgba($color: $colour1, $alpha: 0.7);
+  border-bottom: 2px solid $colour2;
+  height: $header-height;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  .header-title {
+    margin-bottom: -14px;
+  }
+  .header-subtitle {
+    font-size: 14px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%;
+    .header-link {
+      font-size: 21px;
+      padding: 2px 0;
+    }
+    .header-link-active {
+      background-color: red;
+    }
+  }
+  * {
+    color: $colour2;
+  }
+}
+
+.element {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landing {
+  background-attachment: fixed;
+  background-image: url("./components/media/background4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.about {
+  background-color: $colour1;
+}
+
+.slide-show {
+  background-color: $colour2;
+}
+
+.mail-list {
+  background-color: $colour1;
+  height: 210px;
+  padding-top: $header-height;
+  * {
+    color: $colour2;
+  }
+}
