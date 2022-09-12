@@ -5,11 +5,20 @@ import Background1 from "./media/background1.jpg";
 import Background2 from "./media/background2.jpg";
 import Background3 from "./media/background3.jpg";
 import Background4 from "./media/background4.jpg";
+import Background5 from "./media/background5.jpg";
+import Background6 from "./media/background6.jpg";
 
 const Landing = () => {
   const [index, setIndex] = useState(0);
 
-  const backgroundArray = [Background1, Background2, Background3, Background4];
+  const backgroundArray = [
+    Background1,
+    Background2,
+    Background3,
+    Background4,
+    Background5,
+    Background6,
+  ];
 
   const timeoutRef = useRef(null);
 
@@ -26,7 +35,7 @@ const Landing = () => {
         setIndex((prevIndex) =>
           prevIndex === backgroundArray.length - 1 ? 0 : prevIndex + 1
         ),
-      6000
+      7000
     );
 
     return () => {

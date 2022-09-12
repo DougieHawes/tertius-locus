@@ -8,6 +8,16 @@ $colour5: #355834;
 
 $header-height: 90px;
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: $colour2;
+}
+::-webkit-scrollbar-thumb {
+  background: $colour1;
+}
+
 * {
   box-sizing: border-box;
   color: $colour1;
@@ -21,17 +31,31 @@ h1 {
 }
 
 .header {
-  background-color: rgba($color: $colour1, $alpha: 0.7);
-  border-bottom: 2px solid $colour2;
+  background-color: rgba($color: $colour2, $alpha: 0.7);
+  border-bottom: 2px solid $colour1;
   height: $header-height;
   position: fixed;
   text-align: center;
   width: 100%;
-  .header-title {
-    margin-bottom: -14px;
-  }
-  .header-subtitle {
-    font-size: 14px;
+  .header-title-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 350px;
+    .header-title-box-left,
+    .header-title-box-right {
+      .header-logo {
+        width: 50px;
+      }
+    }
+    .header-title-text {
+      .header-title {
+        margin-bottom: -14px;
+      }
+      .header-subtitle {
+        font-size: 14px;
+      }
+    }
   }
   .navbar {
     display: flex;
@@ -39,25 +63,29 @@ h1 {
     margin: 0 auto;
     width: 80%;
     .header-link {
+      cursor: pointer;
       font-size: 21px;
-      padding: 2px 0;
+      font-weight: 800;
+    }
+    .active {
+      text-decoration: underline;
     }
   }
   * {
-    color: $colour2;
+    color: $colour1;
   }
 }
 
 .element {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
 }
 
 .landing {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+  transition: 0.6s background-image ease-in-out;
 }
 
 .about {
@@ -75,6 +103,6 @@ h1 {
   }
 }
 
-.active {
-  text-decoration: underline;
+.contact {
+  background-color: $colour2;
 }

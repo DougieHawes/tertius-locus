@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Montserrat&display=swap");
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edead0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a2d32;
+}
+
 * {
   box-sizing: border-box;
   color: #3a2d32;
@@ -12,17 +24,27 @@ h1 {
 }
 
 .header {
-  background-color: rgba(58, 45, 50, 0.7);
-  border-bottom: 2px solid #edead0;
+  background-color: rgba(237, 234, 208, 0.7);
+  border-bottom: 2px solid #3a2d32;
   height: 90px;
   position: fixed;
   text-align: center;
   width: 100%;
 }
-.header .header-title {
+.header .header-title-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 350px;
+}
+.header .header-title-box .header-title-box-left .header-logo,
+.header .header-title-box .header-title-box-right .header-logo {
+  width: 50px;
+}
+.header .header-title-box .header-title-text .header-title {
   margin-bottom: -14px;
 }
-.header .header-subtitle {
+.header .header-title-box .header-title-text .header-subtitle {
   font-size: 14px;
 }
 .header .navbar {
@@ -32,23 +54,27 @@ h1 {
   width: 80%;
 }
 .header .navbar .header-link {
+  cursor: pointer;
   font-size: 21px;
-  padding: 2px 0;
+  font-weight: 800;
+}
+.header .navbar .active {
+  text-decoration: underline;
 }
 .header * {
-  color: #edead0;
+  color: #3a2d32;
 }
 
 .element {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
 }
 
 .landing {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+  transition: 0.6s background-image ease-in-out;
 }
 
 .about {
@@ -66,6 +92,6 @@ h1 {
   color: #edead0;
 }
 
-.active {
-  text-decoration: underline;
+.contact {
+  background-color: #edead0;
 }/*# sourceMappingURL=style.css.map */

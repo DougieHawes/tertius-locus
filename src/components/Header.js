@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
+import monkeyLogo from "../components/media/monkey.svg";
+import coffeeLogo from "../components/media/coffee.svg";
+
 const Header = () => {
   const [state, setState] = useState({
     homeActive: true,
@@ -70,8 +73,18 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="test1" smooth={true} duration={420}>
-        <h1 className="header-title">Tertius Locus</h1>
-        <p className="header-subtitle">the common ground</p>
+        <div className="header-title-box">
+          <div className="header-title-box-left">
+            <img className="header-logo" src={monkeyLogo} alt="monkey logo" />
+          </div>
+          <div className="header-title-text">
+            <h1 className="header-title">Tertius Locus</h1>
+            <p className="header-subtitle">the common ground</p>
+          </div>
+          <div className="header-title-box-right">
+            <img className="header-logo" src={coffeeLogo} alt="coffee logo" />
+          </div>
+        </div>
       </Link>
       <nav className="navbar">
         <Link
