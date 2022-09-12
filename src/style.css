@@ -35,9 +35,6 @@ h1 {
   font-size: 21px;
   padding: 2px 0;
 }
-.header .navbar .header-link-active {
-  background-color: red;
-}
 .header * {
   color: #edead0;
 }
@@ -65,9 +62,11 @@ h1 {
 
 .mail-list {
   background-color: #3a2d32;
-  height: 210px;
-  padding-top: 90px;
 }
 .mail-list * {
   color: #edead0;
+}
+
+.active {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@ import Background4 from "./media/background4.jpg";
 const Landing = () => {
   const backgroundArray = [Background1, Background2, Background3, Background4];
 
-  return <Element name="test1" className="element landing"></Element>;
+  return <Element id="test1" className="element landing"></Element>;
 };
 
 export default Landing;

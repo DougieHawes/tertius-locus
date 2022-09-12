@@ -42,9 +42,6 @@ h1 {
       font-size: 21px;
       padding: 2px 0;
     }
-    .header-link-active {
-      background-color: red;
-    }
   }
   * {
     color: $colour2;
@@ -74,9 +71,11 @@ h1 {
 
 .mail-list {
   background-color: $colour1;
-  height: 210px;
-  padding-top: $header-height;
   * {
     color: $colour2;
   }
+}
+
+.active {
+  text-decoration: underline;
 }

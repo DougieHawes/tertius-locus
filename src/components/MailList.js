@@ -2,7 +2,7 @@ import { Element } from "react-scroll";
 
 const MailList = () => {
   return (
-    <Element name="test4" className="mail-list">
+    <Element id="test4" className="element mail-list">
       Subscribe to our newsletter
     </Element>
   );
